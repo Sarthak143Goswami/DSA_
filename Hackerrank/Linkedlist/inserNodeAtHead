@@ -1,0 +1,10 @@
+static SinglyLinkedListNode insertNodeAtHead(SinglyLinkedListNode llist, int data) {
+    // Create a new node with the given data
+    SinglyLinkedListNode newNode = new SinglyLinkedListNode(data);
+
+    // Set the new node's next pointer to the current head
+    newNode.next = llist;
+
+    // Return the new node as the new head of the list
+    return newNode;
+}
