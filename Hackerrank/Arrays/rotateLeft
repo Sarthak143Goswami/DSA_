@@ -1,0 +1,20 @@
+ public static List<Integer> rotateLeft(int d, List<Integer> arr) {
+        int n = arr.size();
+        // Normalize the number of rotations
+        d = d % n;
+
+        // Create a new list for the rotated array
+        List<Integer> rotatedArr = new ArrayList<>(n);
+
+        // Add the elements from index `d` to the end of the original array
+        for (int i = d; i < n; i++) {
+            rotatedArr.add(arr.get(i));
+        }
+
+        // Add the elements from the start of the original array to index `d-1`
+        for (int i = 0; i < d; i++) {
+            rotatedArr.add(arr.get(i));
+        }
+
+        return rotatedArr;
+    }
