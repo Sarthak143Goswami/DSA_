@@ -1,0 +1,23 @@
+import java.util.Scanner;
+import java.util.regex.*;
+
+public class Solution {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int testCases = Integer.parseInt(sc.nextLine());
+        
+        while (testCases > 0) {
+            String pattern = sc.nextLine();
+            try {
+                // Try to compile the pattern
+                Pattern.compile(pattern);
+                System.out.println("Valid");
+            } catch (PatternSyntaxException e) {
+                // If there's an exception, it's an invalid pattern
+                System.out.println("Invalid");
+            }
+            testCases--;
+        }
+        sc.close();
+    }
+}
